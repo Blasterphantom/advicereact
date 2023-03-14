@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Manrope;
+  src: url(../src/assets/Manrope/Manrope-VariableFont_wght.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homeContainer.container{
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: hsl(218, 23%, 16%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.homeRow.row{
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.homeCol.col{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeDiv{
+  height: 335px;
+  width: 540px;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.diceRow.row{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* position: absolute;
+  top: 66%; */
+  margin-top: -30px;
+}
+
+.diceDiv{
+  width: 65px !important;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  font-family: Manrope;
+  font-weight: 800px;
+}
+
+.diceDiv:hover{
+  box-shadow: 0 0 15px 5px hsl(150, 100%, 66%);
+}
+
+.greenText{
+  color: hsl(150, 100%, 66%);
+}
+
+.adviceText{
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 28px;
+}
+
+.adviceTextBox{
+  display: flex;
+  width: 83%;
+  height: 145px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 551px) {
+  .mobilePic{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 550px) {
+  .homeDiv{
+    height: 315px;
+    width: 350px;
   }
+
+  .deskPic{
+    display: none;
+  }
+
+  .adviceTextBox{
+    display: flex;
+    width: 85%;
+    height: 155px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .adviceText{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 22px;
+  }
+
 }
